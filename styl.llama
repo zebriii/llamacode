@@ -1,0 +1,24 @@
+# FINALLY STYLES!
+# [insert an art here]
+# $stylus_version$ = Stylus 1.0.0 by Zebrii
+# $stlyus_css_faq$ = Read the CSS's docs of Zebrii to know $%BR how to make an CSS file for Stylus!
+
+^ function styl $EXAMPLE_ROUTE$ | $OTHER_EXAMPLE_ROUTE$ # (Type llama_no in the other examples routes if u dont want xD, u can write in cmd if u have the $llamex stylus)
+@ import $llamex stylus % https://stylus.net/download/stylus.llamex
+  @ if cmd run [llama stylus]
+    @scat $stlyus_route_css$
+  @ if cmd run [llama stylus version]
+    @scat $stylus_version$
+  @ if cmd run [llama stylus css faq]
+    @scat $stylus_css_faq$
+  @ if cmd run [llama stylus meow]
+    @scat meow
+  @ if powershell run [$PSVersionTable | llama stylus * | llama stylus]
+    @scat %if_ps_lower_5% hey buddy, u need at least $Microsoft PowerShell 5 to run stylus, and u dont have it bye bye
+  @ if cmd run [llama stylus $WIN_32_VALID_ROUTE$]
+    @scat Selecting that .css route... [$LOADING_WIN32_METER$]
+    @stylus_select $PROVIDED_WIN_32_VALID_ROUTE$
+    @scat Done!
+  @ if cmd run [llama stylus bye]
+    @scat Bye!
+    @llamacode_exit
