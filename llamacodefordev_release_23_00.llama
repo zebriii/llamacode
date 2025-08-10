@@ -26,6 +26,9 @@
 @ else 
   @ scat {That app doesnt exist! %add_if_founded% (llama install $APP_UNIQUE_NAME)}
 
+@ if cmd run [llama exit]
+  @ close $cmd.exe | $powershell.exe | $*CURRENTAPP.exe
+
 @ if cmd run [llama jdk import $jdk_name]
   @ window say llama import llamacode.dev/$jdk_name
 @ else 
