@@ -1,0 +1,32 @@
+# FOR DEVELOPER USE. https://llamacode.dev/jdk/
+#
+#  _     _                         _________ _   __
+# | |   | |                       |_  |  _  \ | / /
+# | |   | | __ _ _ __ ___   __ _    | | | | | |/ / 
+# | |   | |/ _` | '_ ` _ \ / _` |   | | | | |    \ 
+# | |___| | (_| | | | | | | (_| /\__/ / |/ /| |\  \
+# \_____/_|\__,_|_| |_| |_|\__,_\____/|___/ \_| \_/
+                                                 
+                                                 
+
+& import repository(openjdk)
+& import repository(llamajdk)
+& import repository(mangojdk)
+& import repository(developerfriendlyjdk)
+
+^ import pak_converter | dot_llamapak > dot_jdkpackage
+^ import pak_installer | dot_jdkpackage $install_options = enabled $verification = enabled %sha256_verification = enabled
+^ import function </ import | $jdk
+
+@ if cmd run [llama jdk version]
+  @ scat [LlamaJDK_release_23_00 / LlamaJDK 23.00]
+
+@ if cmd run [llama jdk run $app]
+  @ run $APP_UNIQUE_NAME 
+@ else 
+  @ scat {That app doesnt exist! %add_if_founded% (llama install $APP_UNIQUE_NAME)}
+
+@ if cmd run [llama jdk import $jdk_name]
+  @ window say llama import llamacode.dev/$jdk_name
+@ else 
+  @ scat (That JDK dont exist.)
