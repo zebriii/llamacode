@@ -8,7 +8,9 @@
 #| $$     \| $$ \$$    $$| $$ | $$ | $$ \$$    $$ \$$    $$ \$$    $$ \$$    $$ \$$     \
 # \$$$$$$$$ \$$  \$$$$$$$ \$$  \$$  \$$  \$$$$$$$  \$$$$$$   \$$$$$$   \$$$$$$$  \$$$$$$$
 # Build Version 1.63712 Stable by @imtassingg https://github.com/sharpint | https://github.com/zebriii/llamacode                                                                                     
-# Please support me with ur subscribe! https://youtube.com/@imtassingg                                                                                        
+# Please support me with ur subscribe! https://youtube.com/@imtassingg     
+
+! function plsnoopen > llamacode_no_installed || llamacodeinstall.llamash                                                                                   
 
 ^ function downloadm llamex % https://llamacode.dev/jdk/modloader/download/llamex.llamapak/
 ^ function downloadm llamacode_jdk % https://llamacode.dev/jdk/download/llamacodefordev_release_23_00.llama/
@@ -20,3 +22,4 @@
 @ import $llamex lens % https://lens.shader/download/lens/lens_version_12321132312.llamex/
 @ import $jdk utimer % https://utimer.dev/download/utimer.jdkpackage/
 @import $llamex 
+
