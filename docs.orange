@@ -1,0 +1,165 @@
+﻿# PARA EMPEZAR | llamacode.dev/getstarted
+
+LlamaCode es un lenguaje de programacion el cual puede realizar esto
+`> TOP FEATURE: Cambia funciones de Windows (@ window)
+> Cambia funciones de Linux (@ penguin)
+> Contiene CMD y PS juntos en sus scripts .llamash
+> Fáciles maneras de ir con directorios con los comandos deldir, del, cd y coppy
+> Mas rápido que CMD y PS
+> Mas rápido y fácil de aprender, con funciones nativas de PS`
+
+                      **Que esperas? Ve a llamacode.dev/download y empieza**
+
+GUIA DE INSTALACION | llamacode.dev/installguide
+
+Para empezar ve a llamacode.dev/download, y descarga el template
+Ahora ve a VSCode o Notepad++, abre el archivo `index.llama`
+**Y agrega:**
+
+^ function downloadm llamex % https://llamacode.dev/jdk/modloader/download/llamex.llamapak/
+^ function downloadm llamacode_jdk % https://llamacode.dev/jdk/download/llamacodefordev_release_23_00.llama/
+
+^ function plus [import] %main%\assets\cube\
+
+@ import $llamex firellama % https://firellama.repo/download/firellama.llamex/
+@ import $llamex stablellama % https://llama.stable/download/stablellama/llamex/
+@ import $llamex lens % https://lens.shader/download/lens/lens_version_12321132312.llamex/
+@ import $jdk utimer % https://utimer.dev/download/utimer.jdkpackage/
+@import $llamex 
+P.D: Al guardar el archivo llamacode descargara tooooooodo, ya podemos pasar al archivo `llamacodefordev_release_23_00.llama` y empezar a programar
+
+P.D: Tambien puedes descargar mods, o cualquier extension en el archivo con PlsExportLlama en PS, simplemente instalalo con scoop install plsexportllama , winget con winget install plsexportllama y en chocolatey con choco install plsexportllama , una vez instalado cambia el directorio a la raiz de tu proyecto, y pon Invoke-LlamaCode download firellama por ejemplo
+
+# FIRELLAMA | firellama.repo/help
+
+FireLlama (anteriormente LlamaISE) te permite hacer que tus scripts .llamash tengan relaciones con Powershell ISE para que tu script sea apto para todos.
+`@ import $llamex firellama % https://firellama.repo/download/firellama.llamex/`
+
+# STABLELLAMA |  llamacode.dev/plugin/stablellama | llama.stable/help
+
+Este plugin hace que tus scripts de LlamaSH (o tambien .llamash) puedan tener integracion con cmd (LlamaCode tiene PS por defecto) pero al instalar este plugin tienes que decirle a LlamaCode en que terminal decir el comando e.g.:
+~cmd (o ~stable) cd D:\example\example2
+~ps Start-Process example.exe -Verb runAs
+~llama llama plsk1ll .\example.exe | example.exe $LIKETASKMGR$
+
+Importalo ya con:
+`@ import $llamex stablellama % https://llama.stable/download/stablellama/llamex/`
+
+# LENS | lens.shader.help
+
+Lens permite hacer proyectos 3D con llamacode (y tambien el uso de shaders) 
+
+Usalo ya con `@ import $llamex lens % https://lens.shader/download/lens/lens_version_12321132312.llamex/`
+
+UTIMER | https://llamacode.dev/jdk/utimer
+UTimer es un plugin de llamacode el cual te permite cambiar variables de tiempo e.g.:
+
+`llama rvb {
+0.1s > 0.0s}`
+
+O 
+`llama mtply utimer {
+1x > 5x}`
+
+Obten ya con
+`@ import $jdk utimer % https://utimer.dev/download/utimer.jdkpackage/`
+
+# .llamash | llamacode.dev/llamashell
+LlamaShell (o conocido como scripts .llamash)
+Es un REEMPLAZO (y le digo asi porque esta MEJOR que .ps1 y .bat si agregar algunos plugins)
+
+Ejemplo: 
+@ if cmd run [llama help]
+    @ scat [Soy una llama UwU]
+
+o
+
+@ if cmd run [llama acariciar]
+    @ scatdec [Acariciarme?] {if cmd says 
+[*] @scat [Eso es nada...]
+[Si] @scat [Gracias UwU]
+[No] @scat [>:C]
+}
+
+Hay mas comandos, pero eso va para la documentacion de comandos
+
+# MAS .llamash Y AYUDA DE COMANDOS | llamacode.dev/docs/llamashell
+
+Estan estos comandos: 
+Comando                     Accion
+@scat                           Dice algo en la consola
+@window                     Hace acciones dentro de Windows
+@penguin                     Hace acciones dentro de Linux
+@scatdec                      Hace una pregunta interactiva (se combina con if cmd says)
+@if cmd run                  El comando personalizado que el CMD o PS ejecutara.
+@if cmd says                 Si el cmd escribe algo y presiona enter <accion>
+@if cmd leave                Si el cmd se fue, hacer una accion en segundo plano
+@if cmd cls                    Si el cmd limpia la consola, hacer una accion
+@if cmd ignore             Si el cmd no esta activo por <tiempo> hacer <accion>
+@if error                        Si hay error, hacer una accion (@scat recomendado)
+@if warningfc                Si hay una advertencia, hacer una accion (@scat sirve)
+@if cmd dies                 Si el cmd se cerro por terminal (taskkill) o por taskmgr.
+@run                             Ejecuta una aplicacion en el mismo directorio
+@if cmd open               Si una aplicacion se ejecuta, hacer una accion
+@runroute                    Ejecutar una aplicacion (Poner todo el directorio)
+
+Actualmente esos son todos los comandos, son mas interesantes los subcomandos que dire despues.
+SUBCOMANDOS de @WINDOW | https://llamacode.dev/docs/subcommands/window | https://github.com/llamaaa/README.md
+
+En llamacode estan estos subcomandos de @window
+Despues de @window                      
+@window reboot <tiempo> Reinicia despues de <tiempo> [RunAsADMIN]
+@window poweroff <tiempo> <comentario> Apaga despues de <tiempo y deja un <comentario> (opcional) [RunAsADMIN]          
+@window notify <texto> Hace una notificacion y la envia a tu centro de notificaciones
+@window kill <app> CIERRA una aplicacion forzadamente (ejemplo @window kill pepito.exe -now) [RunAsADMIN]
+@make window run <app> ABRE una aplicacion
+@window bsod <error_code> CRASHEA windows con el <error_code> especificado. [runAs / RunAsADMIN]
+@window update <tiempo> ACTUALIZA tu pc despues de cierto tiempo [runAs]
+@window url <url> ABRE una url (tambien se hace con @make window run)
+@window reset RESETEA TU PC [runAs / Permisos de TrustedInstaller] (Puede que windows defender BORRE el script si tiene esto)
+@window logas Te loguea a un cierto usuario [Si es un admin necesitas runAs]
+@window logoff CIERRA la sesion
+(Es casi lo mismo en @penguin, sin ciertos comandos)
+
+3D Y LENS | llamacode.dev/3d
+
+$lens shader "C:\example\example.slens"
+$lens nativeobj "C:\example\example.n.lens"
+$lens import "C:\example.obj" | "C:\example.mtl"
+$lens pwrsh "pwsh examplecommand"
+$lens rmv "OBJECTID" | "C:\example.obj"
+$lens addmultiple "C:\eg.obj : C:\eg.mtl"
+$lens blnder open [OPENS BLENDER!!!]
+$lens dsc oks [IF UR GAME ITS HAVING TROUBLE, THIS WILL FIX SOME ERRORS!]
+$lens dsc nah [IF UR GAME ITS HAVING TROUBLE, THIS DONT FIX ANY ERRORS!!]
+$lens dsc myb [IF UR GAME ITS HAVING TROUBLE, THIS WILL SAY U THE ERROR!]
+$lens f4ckall [DELETES ALL 3D ON UR GAME/PROGRAM!!!]
+$lens runAs f4ckall [DELETES ALL THINGS ON UR GAME, NOT ONLY 3D!!!!!! U CAN ALSO USE THIS CMD WITH $lrns f4ckall]
+$lens runAs rmvforcedd [U CAN ALSO USE THIS CMD WITH $lrns rmvforcedd]
+$lens t3st [TESTS THE GAME]
+$lens runAs t3st [TESTS THE GAME WITH ADMIN, U CAN ALSO USE THIS CMD WITH $lrns t3st]
+$lens info [INFO. THE SAME AS THE README.md IN GITHUB PAGE!]
+$lens wnnainstller "X:\mygame.msi" | "X:\mygame.exe" [MAKES A INSTALLER. FOR THIS U NEED WannaInstaller (llamaaa install wnnainstaller)]
+$lens bashint [USES A BASH COMMAND]
+$lens ziippy "X:\mygame.zip" | "X:\mygame.7z" | "X:\mygame.tar.xz" [MAKES A ZIP FOR UR GAME. FOR THIS U NEED Ziippy (llamaaa install ziippy)]
+$lens runAs about [ABOUT OF RUNAS, THE SAME AS $lrns about]
+$lens littlecat/kitten "Example little cat text" -Red | -HEXCOLOR [USES LITTLECAT. FOR THIS U NEED LittleKitten (llamaaa install kitten)
+$lens exit [EXITS LENS]
+
+UTIMER | utimer.dev/timing/llama/docs
+ALL THE TIMES ARE IN MS, NOT IN SECONDS AND MINUTES, ONLY MILLISECONDS, THERES A MOD THAT ADDS 5m (minutes) or 4mnth (months) oor 5s (seconds) THAT ITS CALLED UTimer Extras (llamaaa install utimer_extras)
+Reverb
+utimer rvb 5.6s 
+Sleep
+utimer sleep 1000s
+Time Points
+utimer addpoint [at ms 10000]
+<Here u can type an LlamaCode action>
+utimer delpoint [ms 10000]
+utimer lspoint 
+<Example of the system>
+UTimer Points:
+MS | 10000 | llama window reboot
+MS | 80000 | llama cd D:\example.example & llama del .\example.example % $NOW$ $FORCED$
+utimer.dev/timing/llama/docs
+
