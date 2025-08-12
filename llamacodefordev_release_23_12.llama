@@ -1,0 +1,55 @@
+# FOR DEVELOPER USE. https://llamacode.dev/jdk/
+#
+#  _     _                         _________ _   __
+# | |   | |                       |_  |  _  \ | / /
+# | |   | | __ _ _ __ ___   __ _    | | | | | |/ / 
+# | |   | |/ _` | '_ ` _ \ / _` |   | | | | |    \ 
+# | |___| | (_| | | | | | | (_| /\__/ / |/ /| |\  \
+# \_____/_|\__,_|_| |_| |_|\__,_\____/|___/ \_| \_/
+# https://github.com/zebrii/llamacode                                                 
+                                                 
+
+& import repository(openjdk)
+& import repository(llamajdk)
+& import repository(mangojdk)
+& import repository(developerfriendlyjdk)
+
+^ import pak_converter | dot_llamapak > dot_jdkpackage
+^ import pak_installer | dot_jdkpackage $install_options = enabled $verification = enabled %sha256_verification = enabled
+^ import python_install| only_python_installers = disabled
+^ import llama_dotnet  | import_c#_integration = enabled
+^ import nocpp         | disable_cpp_from_llama_dotnet $forced = enabled
+^ import llamapython   | import_py = yes cmds_forpythononly = disabled_on_ts_file
+^ import desertllamago | import_go = yes cmds_forpythononly = disabled_on_ts_file
+^ import python_anim   | plugin_yn = yes cmds_pythonanimonly = disabled_on_ts_file
+^ import llamagit      | plsgit    = yes onlygitfunctions = disabled_on_ts_file
+^ import function </ import | $jdk
+
+@ if cmd run [llama jdk version]
+  @ scat [LlamaJDK_release_23_12 / LlamaJDK 23.12]
+
+@ if cmd run [llama jdk run $app]
+  @ run $APP_UNIQUE_NAME 
+@ else 
+  @ scat {That app doesnt exist! %add_if_founded% (llama install $APP_UNIQUE_NAME)}
+
+@ if cmd run [llama jdk run $REPO_NAME$ / $REPO_ID$ %url%]
+  @ add_repo $DATA_PROVIDED
+@ else
+  @ scat (That repo doesnt exist! %BR% Solutions: Its a valid $LLAMEX$ repository %BR% The link its expired %BR% The repo was deleted %BR% May sure that the repo exist! (URL_NAME: "Click here if u want to see the list!")[URL: "https://llamacode.dev/jdk"])
+
+@ if cmd run [llama exit]
+  @ close $cmd.exe | $powershell.exe | $*CURRENTAPP.exe
+
+@ if cmd run [llama jdk import $github_link]
+  @ add_git_repo [$github_link]
+@ else / @ if error
+  @ scat Failed! Make sure that u have Git / Thats a valid github link!
+
+@ if cmd run [llama jdk import $jdk_name]
+  @ window say llama import llamacode.dev/$jdk_name
+@ else 
+  @ scat (That JDK dont exist.)
+
+
+
