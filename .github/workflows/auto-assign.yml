@@ -1,4 +1,3 @@
-
 name: Auto Assign
 on:
   issues:
