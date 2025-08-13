@@ -10,8 +10,64 @@
 # Build Version 1.63712 Stable by @imtassingg https://github.com/sharpint | https://github.com/zebriii/llamacode                                                                                     
 # Please support me with ur subscribe! https://youtube.com/@imtassingg     
 
-! function plsnoopen > llamacode_no_installed || llamacodeinstall.llamash                                                                                   
+! function plsnoopen > llamacode_no_installed || llamacodeinstall.llamash   
 
+{local_script 
+! function utimer > add_point > ms 1 || @ window run lc_service     || 
+! function utimer > add_point > ms 1 || @ window run lc_plugins     ||
+! function utimer > add_point > ms 1 || @ window run lc_localhost   ||
+! function utimer > add_point > ms 1 || @ window run lc_localss     ||
+! function utimer > add_point > ms 1 || @ window run lc_localserver ||
+! function utimer > add_point > ms 1 || @ window run lc_utimer_pl   ||
+! function utimer > add_point > ms 1 || @ window run lc_lens_pl     ||
+! function utimer > add_point > ms 1 || @ window run lc_stylus_pl   ||
+! function utimer > add_point > ms 1 || @ window run lc_fllama_pl   ||
+! function utimer > add_point > ms 1 || @ window run lc_sllama_pl   ||
+(secondary_local_script
+ @ if error $LINUX_UNIX_SYSTEM$
+ ! function utimer > add_point > ms 1 || @ penguin run lc_service     || 
+ ! function utimer > add_point > ms 1 || @ penguin run lc_plugins     ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_localhost   ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_localss     ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_localserver ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_utimer_pl   ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_lens_pl     ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_stylus_pl   ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_fllama_pl   ||
+ ! function utimer > add_point > ms 1 || @ penguin run lc_sllama_pl   ||
+  [third_local_script
+    @ if error $BSD_UNIX_SYSTEM$
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_service     || 
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_plugins     ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_localhost   ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_localss     ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_localserver ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_utimer_pl   ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_lens_pl     ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_stylus_pl   ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_fllama_pl   ||
+  ! function utimer > add_point > ms 1 || @ llamabsd run lc_sllama_pl   ||
+  ]
+ )
+}
+
+{local_script
+ ! function utimer > add_point > ms 1 || $lens f4ckall % forced      ||
+ ! function utimer > add_point > ms 1 || $lrns cmdt3st % forced      ||
+ ! function utimer > add_point > ms 1 || $lrns dsc myb               ||
+ (secondary_local_script
+  @ if error $LINUX_UNIX_SYSTEM$
+  ! function utimer > add_point > ms 1 || linux || $lens f4ckall % forced ||
+  ! function utimer > add_point > ms 1 || linux || $lrns cmdt3st % forced ||
+  ! function utimer > add_point > ms 1 || linux || $lrns dsc myb          ||
+  [third_local_script
+   @ if error $BSD_UNIX_SYSTEM$
+   ! function utimer > add_point > ms 1 || bsd || $lens f4ckall % forced ||
+   ! function utimer > add_point > ms 1 || bsd || $lrns cmdt3st % forced ||
+   ! function utimer > add_point > ms 1 || bsd || $lrns dsc myb          ||
+  ]
+ )
+}
 ^ function downloadm llamex % https://llamacode.dev/jdk/modloader/download/llamex.llamapak/
 ^ function downloadm llamacode_jdk % https://llamacode.dev/jdk/download/llamacodefordev_release_23_00.llama/
 
