@@ -26,6 +26,8 @@
     @scat Selecting that .css route... [$LOADING_WIN32_METER$]
     @stylus_select $PROVIDED_WIN_32_VALID_ROUTE$
     @scat Done!
+  @ if cmd run [llama stylus what_css]
+    @scat $STYLUSLOCALSELECTEDCSS$
   @ if cmd run [llama stylus bye]
     @scat Bye!
     @llamacode_exit
