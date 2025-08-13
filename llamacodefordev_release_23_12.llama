@@ -51,5 +51,12 @@
 @ else 
   @ scat (That JDK dont exist.)
 
+@ if cmd run [llama cmd_add $PROVIDED_CMD$ $PROVIDED_SUBCMD$ $LLAMACODE_CMD$]
+  @ create_cmd $PROVIDED_CMD$ $PROVIDED_SUBCMD$ $LLAMACODE_CMD$
+  @ addtollamacodelist
+
+@ if cmd run [$ANY_CUSTOM_CMD$ $ANY_CUSTOM_SUBCMD$]
+  @ execute $PROVIDEDLLAMACODECMD$
+  @ exit
 
 
