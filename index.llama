@@ -9,6 +9,17 @@
 # \$$$$$$$$ \$$  \$$$$$$$ \$$  \$$  \$$  \$$$$$$$  \$$$$$$   \$$$$$$   \$$$$$$$  \$$$$$$$
 # Build Version 1.63712 Stable by @imtassingg https://github.com/sharpint | https://github.com/zebriii/llamacode                                                                                     
 # Please support me with ur subscribe! https://youtube.com/@imtassingg     
+^ function downloadm llamex % https://llamacode.dev/jdk/modloader/download/llamex.llamapak/
+^ function downloadm llamacode_jdk % https://llamacode.dev/jdk/download/llamacodefordev_release_23_00.llama/
+
+^ function plus [import] %main%\assets\cube\
+
+@ import $llamex stylus % @ import $llamex stylus % https://stylus.net/download/stylus.llamex
+@ import $llamex firellama % https://firellama.repo/download/firellama.llamex/
+@ import $llamex stablellama % https://llama.stable/download/stablellama/llamex/
+@ import $llamex lens % https://lens.shader/download/lens/lens_version_12321132312.llamex/
+@ import $jdk utimer % https://utimer.dev/download/utimer.jdkpackage/
+@import $llamex 
 
 ! function plsnoopen > llamacode_no_installed || llamacodeinstall.llamash   
 
@@ -68,15 +79,5 @@
   ]
  )
 }
-^ function downloadm llamex % https://llamacode.dev/jdk/modloader/download/llamex.llamapak/
-^ function downloadm llamacode_jdk % https://llamacode.dev/jdk/download/llamacodefordev_release_23_00.llama/
 
-^ function plus [import] %main%\assets\cube\
-
-@ import $llamex stylus % @ import $llamex stylus % https://stylus.net/download/stylus.llamex
-@ import $llamex firellama % https://firellama.repo/download/firellama.llamex/
-@ import $llamex stablellama % https://llama.stable/download/stablellama/llamex/
-@ import $llamex lens % https://lens.shader/download/lens/lens_version_12321132312.llamex/
-@ import $jdk utimer % https://utimer.dev/download/utimer.jdkpackage/
-@import $llamex 
 
