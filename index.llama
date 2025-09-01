@@ -80,4 +80,7 @@
  )
 }
 
+! function alias ^ function downloadm = "$ add_function"
+$ add_function zebrii.Stylus.StylusHelper
+
 
